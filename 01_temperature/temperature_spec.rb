@@ -49,10 +49,6 @@ describe "temperature conversion functions" do
       expect(ctof(100)).to eq(212)
     end
 
-    it "converts arbitrary temperature" do
-      expect(ctof(20)).to eq(68)
-    end
-
     it "converts body temperature" do
       expect(ctof(37)).to be_within(0.1).of(98.6)
       # Why do we need to use be_within?
@@ -60,6 +56,10 @@ describe "temperature conversion functions" do
       # and http://en.wikipedia.org/wiki/IEEE_754-2008
       # and http://en.wikipedia.org/wiki/Double_precision_floating-point_format
       # Also, try "puts 0.5 - 0.4 - 0.1" -- pretty crazy, right?
+    end
+
+    it "converts arbitrary temperature" do
+      expect(ctof(20)).to eq(68)
     end
 
   end

@@ -36,7 +36,7 @@ describe "Simon says" do
 
   describe "repeat" do
     it "should repeat" do
-      expect(repeat("hello")).to eq("hello hello")
+      expect(repeat("hello")).to eq("hello hello hello")
     end
 
     # Wait a second! How can you make the "repeat" method
@@ -44,7 +44,7 @@ describe "Simon says" do
     #
     # Hint: *default values*
     it "should repeat a number of times" do
-      expect(repeat("hello", 3)).to eq("hello hello hello")
+      expect(repeat("hello", 5)).to eq("hello hello hello hello hello")
     end
   end
 
@@ -53,8 +53,8 @@ describe "Simon says" do
       expect(start_of_word("hello", 1)).to eq("h")
     end
 
-    it "returns the first two letters" do
-      expect(start_of_word("Bob", 2)).to eq("Bo")
+    it "returns the first three letters" do
+      expect(start_of_word("Bonjour", 3)).to eq("Bon")
     end
 
     it "returns the first several letters" do

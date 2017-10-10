@@ -38,6 +38,13 @@ describe "Timer" do
       @timer.seconds = 4000
       expect(@timer.time_string).to eq("01:06:40")
     end
+
+    xit "should display 40000 seconds as 11:06:40" do
+      @timer.seconds = 40000
+      expect(@timer.time_string).to eq("11:06:40")
+    end
+
+
   end
 
 

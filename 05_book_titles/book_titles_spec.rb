@@ -43,6 +43,11 @@ describe Book do
           expect(@book.title).to eq("To Kill a Mockingbird")
         end
 
+        specify 'or' do
+          @book.title = "red or black"
+          expect(@book.title).to eq("Red or Black")
+        end
+
         specify 'an' do
           @book.title = "to eat an apple a day"
           expect(@book.title).to eq("To Eat an Apple a Day")
